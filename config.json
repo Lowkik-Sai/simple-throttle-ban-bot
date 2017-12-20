@@ -1,0 +1,18 @@
+{
+    "modRole": "MODROLEID",
+    "throttlingMS": 3600000,
+    "disabledRoleBan": [
+        "ROLEID"
+    ],
+    "serverId": "SERVERID",
+    "modlog": false,
+    "token": "BOTTOKEN",
+    "fisherman": {
+        "prefixes": ["?"]
+    },
+    "allowBotBan": false,
+    "allowHigherRankBan": false,
+    "presenceOnConnect": {
+        "status": "invisible"
+    }
+}

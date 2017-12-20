@@ -1,0 +1,16 @@
+{
+  "name": "simple-throttle-ban-bot",
+  "version": "1.0.0",
+  "description": "A simple bot used to throttle your ban command from your mods",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "maxerbox",
+  "license": "ISC",
+  "dependencies": {
+    "command-loader-fisherman": "^1.0.2",
+    "fisherman-discord.js": "^1.0.6",
+    "lru-cache": "^4.1.1"
+  }
+}
