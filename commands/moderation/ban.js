@@ -13,7 +13,7 @@ module.exports = {
       if (!target) return
       if (target.roles.has(config.modRole)) return
       if (target._roles.some(role => config.disabledRoleBan.indexOf(role) >= 0)) return
-      // if (target.user.bot && !config.allowBotBan) return
+      if (target.user.bot && !config.allowBotBan) return
       if (!config.allowHigherRankBan) {
         var roleIndexesReq = req.message.member.roles.map((role) => {
           return role.calculatedPosition
