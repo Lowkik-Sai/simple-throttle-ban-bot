@@ -34,7 +34,7 @@ Ex: `?ban @malicioususer He is malicious`
 | throttlingMS       | int           | Time used to thottle the ban command from mods                                                                                                                              |
 | disabledRoleBan    | Array<String> | An array of role id. If the ban target has one of those role, it can't be banned                                                                                            |
 | serverId           | String        | The server id used to operate. Only used by modLog                                                                                                                          |
-| modlog             | String/Bool   | If set to false, there are no logs sent to the modlog channel. It's the modlog channel id. When a mod use the ban command, it sent some infos to the log channel in a embed |
+| modLog             | String/Bool   | If set to false, there are no logs sent to the modlog channel. It's the modlog channel id. When a mod use the ban command, it sent some infos to the log channel in a embed |
 | token              | String        | The bot token                                                                                                                                                               |
 | fisherman          | Object        | The Fisherman options. See [here](https://maxerbox.github.io/fisherman-discord.js/?api=fisherman#FishermanOptions)                                                                |
 | allowBotBan        | Bool          | Allow mods to ban bots on the server                                                                                                                                         |

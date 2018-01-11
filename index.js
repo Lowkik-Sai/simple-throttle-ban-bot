@@ -10,7 +10,7 @@ var bot = new Fisherman(config.fisherman)
 bot.use(commandLoader)
 bot.use(isModMiddleware)
 bot.on('initialized', () => {
-  bot.client.user.setPresence(config.presenceOnConnect)
+  bot.client.user.setPresence(config.presenceOnConnect).catch(err => console.log(err))
   console.log('Logged in')
   if (config.modLog) {
     bot.channelLog = bot.client.guilds.get(config.serverId).channels.get(config.modlog)
