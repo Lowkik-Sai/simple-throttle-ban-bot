@@ -20,6 +20,12 @@ It prevents you from getting raid by your mods and getting all your members bann
 
 * Run the index.js file with node
 
+## Use
+
+[prefix]ban [@usermention] [reason]
+
+Ex: `?ban @malicioususer He is malicious`
+
 ## Config file properties
 
 | Property name      | Type          | Description                                                                                                                                                                 |
