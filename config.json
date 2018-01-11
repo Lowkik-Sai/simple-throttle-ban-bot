@@ -5,7 +5,7 @@
         "ROLEID"
     ],
     "serverId": "SERVERID",
-    "modlog": false,
+    "modLog": false,
     "token": "BOTTOKEN",
     "fisherman": {
         "prefixes": ["?"]

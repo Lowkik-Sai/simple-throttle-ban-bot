@@ -12,7 +12,7 @@ bot.use(isModMiddleware)
 bot.on('initialized', () => {
   bot.client.user.setPresence(config.presenceOnConnect)
   console.log('Logged in')
-  if (config.modlog) {
+  if (config.modLog) {
     bot.channelLog = bot.client.guilds.get(config.serverId).channels.get(config.modlog)
     if (!bot.channelLog) throw new Error('Cannot found the modlog channel')
   }
