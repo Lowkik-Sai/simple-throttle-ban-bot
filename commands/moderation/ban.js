@@ -10,7 +10,7 @@ module.exports = {
       cache.set(req.message.author.id, true)
       var execArray = this.regPattern.exec(req.command.suffixe)
       var userId = execArray[1]
-      var reason = execArray.length >= 3 ? execArray[2] : 'No reason'
+      var reason = execArray[2] !== '' ? execArray[2].replace(/^\s+|\s+$/g, '') : 'No reason'
       var target = req.message.channel.guild.members.get(userId)
       if (!target) return
       if (target.roles.has(config.modRole)) return
@@ -28,10 +28,10 @@ module.exports = {
         if (roleIndexesReq[roleIndexesReq.length - 1] < roleIndexesTarget[roleIndexesTarget.length - 1]) return
       }
 
-      console.log(`Banning command request from id: ${req.message.author.id} - ${req.message.author.username}\n Ban id requested: ${userId}\nReason: ${reason}`)
+      console.log(`Banning command request from id: ${req.message.author.id} - ${req.message.author.username}\n Ban id requested: ${userId} - ${target.user.username}\nReason: ${reason}`)
       req.channel.guild.ban(userId).then(() => {
-        if (config.modLog) req.client.channelLog.send('', {embed: {description: `User banned by ${req.message.author.username} - ${req.message.author.id}\n${reason}`, title: `New ban: ${userId}`}})
-        console.log(` Banned: ${userId}`)
+        if (config.modLog) req.client.channelLog.send('', {embed: {description: `User banned by ${req.message.author.username} - ${req.message.author.id}\nReason: ${reason}`, title: `New ban: ${userId} - ${target.user.username}`}})
+        console.log(` Banned: ${userId} at ${new Date().toJSON().slice(0, 20).replace(/-/g, '/')}`)
       }).catch((err) => {
         console.log(`Can't ban\n ${err.message}`)
         req.channel.send('Can\'t ban')
