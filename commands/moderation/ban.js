@@ -40,5 +40,5 @@ module.exports = {
   },
   channelType: ['text'],
   locales: { moderation: true },
-  regPattern: new RegExp('<@!?([0-9]+)>\s*(.*)')
+  regPattern: new RegExp('(?:<@)?!?([0-9]+)>?\s*(.*)')
 }
