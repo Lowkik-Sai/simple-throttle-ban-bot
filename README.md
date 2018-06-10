@@ -22,9 +22,11 @@ It prevents you from getting raid by your mods and getting all your members bann
 
 ## Use
 
-[prefix]ban [@usermention] [reason]
+[prefix]ban [@usermention] [reason] or
 
-Ex: `?ban @malicioususer He is malicious`
+[prefix]ban [id] [reason]
+
+Ex: `?ban @malicioususer He is malicious`, `?ban 7987987984465 He is very malicious`
 
 ## Config file properties
 
