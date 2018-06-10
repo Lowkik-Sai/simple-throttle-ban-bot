@@ -12,7 +12,7 @@ module.exports = {
       var userId = execArray[1]
       var reason = execArray[2] !== '' ? execArray[2].replace(/^\s+|\s+$/g, '') : 'No reason'
       var target = req.message.channel.guild.members.get(userId)
-      if (!target) {
+      if (target) {
         if (target.roles.has(config.modRole)) return
         if (target._roles.some(role => config.disabledRoleBan.indexOf(role) >= 0)) return
         if (target.user.bot && !config.allowBotBan) return
