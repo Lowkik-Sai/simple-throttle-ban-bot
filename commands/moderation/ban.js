@@ -28,9 +28,9 @@ module.exports = {
           if (roleIndexesReq[roleIndexesReq.length - 1] < roleIndexesTarget[roleIndexesTarget.length - 1]) return
         }
       }
-      console.log(`Banning command request from id: ${req.message.author.id} - ${req.message.author.username}\n Ban id requested: ${userId} - ${target !== null ? target.user.username : 'Unknown name'}\nReason: ${reason}`)
+      console.log(`Banning command request from id: ${req.message.author.id} - ${req.message.author.username}\n Ban id requested: ${userId} - ${target != null ? target.user.username : 'Unknown name'}\nReason: ${reason}`)
       req.channel.guild.ban(userId, {reason: reason}).then(() => {
-        if (config.modLog) req.client.channelLog.send('', { embed: { description: `User banned by ${req.message.author.username} - ${req.message.author.id}\nReason: ${reason}`, title: `New ban: ${userId} - ${target !== null ? target.user.username : 'Unknown name'}` } })
+        if (config.modLog) req.client.channelLog.send('', { embed: { description: `User banned by ${req.message.author.username} - ${req.message.author.id}\nReason: ${reason}`, title: `New ban: ${userId} - ${target != null ? target.user.username : 'Unknown name'}` } })
         console.log(` Banned: ${userId} at ${new Date().toJSON().slice(0, 20).replace(/-/g, '/')}`)
       }).catch((err) => {
         console.log(`Can't ban\n ${err.message}`)
