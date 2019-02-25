@@ -1,8 +1,8 @@
 const CommandLoader = require('command-loader-fisherman')
-const {resolve} = require('path')
+const { resolve } = require('path')
 const config = require('./config.json')
 const IsModMiddleware = require('./IsModMiddleware')
-const {Fisherman} = require('fisherman-discord.js')
+const { Fisherman } = require('fisherman-discord.js')
 
 var commandLoader = new CommandLoader(resolve(__dirname, 'commands'))
 var isModMiddleware = new IsModMiddleware()
