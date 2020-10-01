@@ -17,4 +17,4 @@ bot.on('initialized', () => {
     if (!bot.channelLog) throw new Error('Cannot found the modlog channel')
   }
 })
-bot.init(config.token)
+bot.init(process.env.token)
