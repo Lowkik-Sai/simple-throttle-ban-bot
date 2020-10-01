@@ -1,13 +1,13 @@
 {
-    "modRole": "MODROLEID",
+    "modRole": "726057569105346590",
     "throttlingMS": 3600000,
     "disabledRoleBan": [
-        "ROLEID"
+        "759687905210925076"
     ],
-    "serverId": "SERVERID",
-    "modLog": false,
+    "serverId": "726055475178635305",
+    "modLog": true,
     "fisherman": {
-        "prefixes": ["?"]
+        "prefixes": ["-"]
     },
     "allowBotBan": false,
     "allowHigherRankBan": false,
