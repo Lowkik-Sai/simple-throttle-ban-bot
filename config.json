@@ -6,7 +6,6 @@
     ],
     "serverId": "SERVERID",
     "modLog": false,
-    "token": "BOTTOKEN",
     "fisherman": {
         "prefixes": ["?"]
     },
